@@ -1,0 +1,4 @@
+clase 38: mostrar salidas en el programa, la funcion .format 
+         https://www.udemy.com/python-3-al-completo-desde-cero/?start=0
+
+
