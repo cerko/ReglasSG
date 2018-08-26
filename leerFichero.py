@@ -2,12 +2,12 @@ from io import open
 import re
 
 
-f = open('HH20180720.txt','r')
+f = open('HH.txt','r')
 mensaje = f.read()
 # print(mensaje)
 f.close()
 
-asientos = re.findall('Asiento [1-6]: .+ \(', mensaje)
+asientos = re.findall('Asiento [1-6]: .+ (', mensaje)
 
 asientos[6:] = [] # nos quedamos con solo los 6 primeras apariciones de los asientos
 
