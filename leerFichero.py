@@ -2,19 +2,19 @@ from io import open
 import re
 
 
-f = open('HH.txt','r')
+f = open('HH.txt','r', encoding='utf-8' )
 mensaje = f.read()
 # print(mensaje)
 f.close()
 
-asientos = re.findall('Asiento [1-6]: .+ (', mensaje)
+asientos = re.findall('Seat [1-6]: .+ \(', mensaje)
 
 asientos[6:] = [] # nos quedamos con solo los 6 primeras apariciones de los asientos
 
 for i in range(len(asientos)):
     asientos[i] = asientos[i].replace("("," ").strip(" ")
     x = asientos[i]
-    asientos[i] = x[11:]
+    asientos[i] = x[8:]
     print(asientos[i])
 
 
